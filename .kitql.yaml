@@ -1,0 +1,16 @@
+generates:
+  # The output folder
+  ./src/lib/server/gen/kitql:
+    # input folder
+    modules:
+      - ./src/lib/server/modules/*
+    actions:
+      # createEnumsModule:
+      #   prismaFile: ./prisma/schema.prisma
+      mergeModuleTypedefs: true
+      mergeModuleResolvers: true
+      mergeContexts: true
+      mergeModules: true
+
+    moduleOutputFolder: gen/kitql
+    importBaseTypesFrom: ./src/lib/server/server/gen/graphql-base-types.ts
